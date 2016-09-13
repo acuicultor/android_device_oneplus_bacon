@@ -31,9 +31,6 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 
-# Build with Clang by default
-USE_CLANG_PLATFORM_BUILD := true
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=23
 
