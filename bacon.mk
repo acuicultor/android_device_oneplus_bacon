@@ -69,6 +69,9 @@ PRODUCT_PACKAGES += \
     camera.bacon \
     Snap
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.codecremote=false
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -220,6 +223,14 @@ PRODUCT_PACKAGES += \
 # Recovery
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/bacon
+
+# STK
+PRODUCT_PACKAGES += \
+    Stk
+    
+# Telephony-ext
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
 
 # Thermal config
 PRODUCT_COPY_FILES += \

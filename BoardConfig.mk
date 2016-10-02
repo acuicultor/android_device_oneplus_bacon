@@ -34,6 +34,11 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 # Build with Clang by default
 USE_CLANG_PLATFORM_BUILD := true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=23
+
+WITHOUT_CHECK_API := true
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -46,15 +51,15 @@ TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_CONFIG := cyanogenmod_bacon_defconfig
+TARGET_KERNEL_CONFIG := radioactive_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -99,11 +104,11 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Encryption
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # Flags for modem (we still have an old modem)
-COMMON_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
-COMMON_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
+BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
+BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -148,6 +153,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 # NFC
 BOARD_NFC_CHIPSET := pn547
 
+# Power
+TARGET_POWERHAL_VARIANT := qcom
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
@@ -161,10 +169,10 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
 TARGET_NO_RPC := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-    $(PLATFORM_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    $(PLATFORM_PATH)/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
