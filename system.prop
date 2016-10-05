@@ -77,3 +77,7 @@ persist.timed.enable=true
 
 # Wifi
 wifi.interface=wlan0
+
+# Assertive Display
+ro.qcom.ad=1
+ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
