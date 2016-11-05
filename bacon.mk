@@ -237,6 +237,10 @@ PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine-8974.conf
 
+# Widevine
+PRODUCT_PACKAGES += \
+    libshim_wvm
+
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
