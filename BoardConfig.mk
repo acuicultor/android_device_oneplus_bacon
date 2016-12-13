@@ -180,6 +180,9 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 # Snapdragon LLVM
 TARGET_USE_SDCLANG := true
 
+# Add fix for common JACK issues
+ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m
+
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
