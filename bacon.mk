@@ -220,6 +220,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.bacon.rc \
     libinit_bacon \
+    init.spectrum.rc \
+    init.spectrum.sh \
     ueventd.bacon.rc
 
 PRODUCT_PACKAGES += \
