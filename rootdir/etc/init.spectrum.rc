@@ -44,13 +44,13 @@ on property:persist.spectrum.profile=0
     write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
     write /sys/devices/system/cpu/cpufreq/interactive/boost 1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 300000
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 2457600
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 2457600
     write /sys/module/adreno_idler/parameters/adreno_idler_active Y   
   
 # Performance 
@@ -72,15 +72,17 @@ on property:persist.spectrum.profile=1
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sde/queue/read_ahead_kb 128
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "dyninteractive"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "dyninteractive"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "dyninteractive"
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "dyninteractive"
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 300000
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 2457600
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 2457600
     write /sys/module/adreno_idler/parameters/adreno_idler_active N 
    
    
@@ -103,15 +105,17 @@ on property:persist.spectrum.profile=2
     write /sys/block/sda/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/read_ahead_kb 2048
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "dyninteractive"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "dyninteractive"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "dyninteractive"
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "dyninteractive"
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 268800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 268800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 268800
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 268800
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 268800
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 268800
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1574400
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1574400
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1574400
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1574400
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1574400
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1574400
     write /sys/module/adreno_idler/parameters/adreno_idler_active Y  
 
 # Gaming
@@ -133,13 +137,15 @@ on property:persist.spectrum.profile=3
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sde/queue/read_ahead_kb 128
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "dyninteractive"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "dyninteractive"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "dyninteractive"
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "dyninteractive"
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 300000
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 2457600
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 2457600
     write /sys/module/adreno_idler/parameters/adreno_idler_active N  
